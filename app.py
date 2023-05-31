@@ -15,11 +15,6 @@ db = client[DB_NAME]
 
 app = Flask(__name__)
 
-password = 'sparta'
-cxn_str = f'mongodb+srv://dbpertama:{password}@cluster0.8pjjzub.mongodb.net/?retryWrites=true&w=majority'
-client = MongoClient(cxn_str)
-db = client.week3
-
 @app.route('/')
 def main():
     return render_template('index.html')
